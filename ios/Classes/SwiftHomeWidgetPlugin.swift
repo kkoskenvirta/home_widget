@@ -121,7 +121,7 @@ public class SwiftHomeWidgetPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       {
         if #available(iOS 14.0, *) {
           #if arch(arm64) || arch(i386) || arch(x86_64)
-            WidgetCenter.shared.reloadTimelines(ofKind: name)
+            WidgetCenter.shared.reloadAllTimelines()
             result(true)
           #endif
         } else {
